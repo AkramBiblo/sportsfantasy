@@ -1,0 +1,260 @@
+<li><table>
+            <tbody>
+              <tr>
+                    <td>${med[0]}</td>
+                    <td>${med[1]}</td>
+                    <td>
+                      <div class="row">
+                              <div class="col-lg-7 mt-2">
+                                  <h6><label for="DPD">Doses per day</label></h6>
+                              </div>
+                              <div class="col-lg-5">
+                                   <div class="form-group">
+                                <select class="form-control">
+                                    <option>1 + 0 + 0</option>
+                                    <option>1 + 0 + 1</option>
+                                    <option>1 + 1 + 1</option>
+                                    <option>1 + 1 + 1 + 1</option>
+                                </select>
+                              </div>
+                              </div>
+                          </div>
+                    </td>
+                    <td>
+                      <div class="row text-center">
+                              <div class="col-lg-7 mt-2">
+                                  <h6><label for="BOAE">Before/After Eating</label></h6>
+                              </div>
+                              <div class="col-lg-5">
+                                   <div class="form-group">
+                                <select class="form-control">
+                                    <option>After Eating</option>
+                                    <option>Before Eating</option>
+                                </select>
+                              </div>
+                              </div>
+                          </div>
+                    </td>
+                  </tr>
+              </tbody>
+          </table></li>
+
+
+          <td>
+                      <div class="row">
+                              <div class="col">
+                                   <div class="form-group">
+                                <select class="form-control" name="DPD">
+                                    <option value="0 + 0 + 1">0 + 0 + 1</option>
+                                    <option value="1 + 0 + 1">1 + 0 + 1</option>
+                                    <option value="1 + 1 + 1">1 + 1 + 1</option>
+                                    <option value="1 + 1 + 1 + 1">1 + 1 + 1 + 1</option>
+                                </select>
+                              </div>
+                              </div>
+                          </div>
+                    </td>
+                    <td>
+                      <div class="row text-center">
+                              <div class="col">
+                                   <div class="form-group">
+                                <select class="form-control">
+                                    <option>After Eating</option>
+                                    <option>Before Eating</option>
+                                </select>
+                              </div>
+                              </div>
+                          </div>
+                    </td>
+
+
+// user.get("/", (req, res) => {
+//   const getDBInfo = require("../../db");
+//   const con = getDBInfo.con;
+//   let name = "sport"
+//   let thead = ['Date',
+//           'Day',
+//           '5:00am - 6:00am',
+//           '6:00am - 7:00am',
+//           '7:00am - 8:00am',
+//           '8:00am - 9:00am',
+//           '9:00am - 10:00am',
+//           '10:00am - 11:00am',
+//           '11:00am - 12:00pm',
+//           '12:00pm - 1:00pm',
+//           '1:00pm - 2:00pm',
+//           '2:00pm - 3:00pm',
+//           '3:00pm - 4:00pm',
+//           '4:00pm - 5:00pm',
+//           '5:00pm - 6:00pm',
+//           '6:00pm - 7:00pm',
+//           '7:00pm - 8:00pm',
+//           '8:00pm - 9:00pm',
+//           '9:00pm - 10:00pm',
+//           '10:00pm - 11:00pm',
+//           '11:00pm - 12:00am',
+//           '12:00am - 1:00am',
+//           '1:00am - 2:00am',
+//           '2:00am - 3:00am',
+//           '3:00am - 4:00am',
+//           '4:00am - 5:00am'];
+//     let sqlString = '';
+
+//   for (let i = 0; i < thead.length; i++) {
+//     const th = thead[i];
+//     let dataType = 'VARCHAR(255)';
+//     let data = th + ' ' + dataType + ',';
+
+//     sqlString = sqlString.concat(`${data}`);
+//   }       
+//   let s = sqlString.slice(0, sqlString.length -1) 
+//   var sql = `CREATE TABLE december (
+//     id INT AUTO_INCREMENT PRIMARY KEY,
+// Date VARCHAR(255),
+// Day VARCHAR(255),
+// _5amto6am VARCHAR(255),
+// _6amto7am VARCHAR(255),
+// _7amto8am VARCHAR(255),
+// _8amto9am VARCHAR(255),
+// _9amto10am VARCHAR(255),
+// _10amto11am VARCHAR(255),
+// _11amto12pm VARCHAR(255),
+// _12pmto1pm VARCHAR(255),
+// _1pmto2pm VARCHAR(255),
+// _2pmto3pm VARCHAR(255),
+// _3pmto4pm VARCHAR(255),
+// _4pmto5pm VARCHAR(255),
+// _5pmto6pm VARCHAR(255),
+// _6pmto7pm VARCHAR(255),
+// _7pmto8pm VARCHAR(255),
+// _8pmto9pm VARCHAR(255),
+// _9pmto10pm VARCHAR(255),
+// _10pmto11pm VARCHAR(255),
+// _11pmto12am VARCHAR(255),
+// _12amto1am VARCHAR(255),
+// _1amto2am VARCHAR(255),
+// _2amto3am VARCHAR(255),
+// _3amto4am VARCHAR(255),
+// _4amto5am VARCHAR(255))`;
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log("Table created");
+//   });
+  
+//   res.render("user", {
+//     title: "user",
+//   });
+// });
+
+let month = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+  
+  for (let i = 0; i < month.length; i++) {
+    const m = month[i]
+    for (let i = 0; i < 31; i++) {
+      let sql = `INSERT INTO ${m} (Day) VALUE ('')`;
+      con.query(sql, (err, result) => {});
+    }
+    
+  }
+
+
+   style="
+    background: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+
+  <div class="row">
+      <div class="col-sm text-center d-flex flex-wrap align-content-center">
+        <!-- <img class="img-fluid rounded p-2" src="/img/banner_2.jpg" alt="Football turf"> -->
+        <div class="container p-3">
+          <h3
+            class="font-italic _head"
+            id="firstHeading"
+            style="font-family: Sofia, sans-serif; color: #0a0a0a"
+          >
+            Sports Fantasy !!! <br />
+            Your Desired Turf Play Ground !!!
+          </h3>
+          <p class="font-italic">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row f">
+            <div class="col-sm m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_4.png" alt="Football turf">
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    Navbar
+    <div class="container-fluid f d-flex justify-content-start">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <!-- Toggler/collapsibe Button -->
+          <button
+            class="navbar-toggler bg-dark"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav text-start">
+              <li class="nav-item">
+                <a class="nav-link text-dark nav-font" href="/user">Home</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown" id="dropdownMenu_1">
+                  <button type="button" class="btn dropdown-toggle text-dark" data-toggle="dropdown">
+                    Services
+                  </button>
+                  <div class="dropdown-menu text-dark">
+                    <a class="dropdown-item">24/7 Booking System</a>
+                    <a class="dropdown-item">Attached Washroom</a>
+                    <!-- <a class="dropdown-item" href="/#">Shopify Website Design</a> -->
+                    <a class="dropdown-item">Food/Water Supply</a>
+                    <a class="dropdown-item">Personal Locker</a>
+                    <a class="dropdown-item">Football & Jersey Support</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark nav-font" href="/gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark nav-font" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>

@@ -1,0 +1,249 @@
+<body>
+  <div class="container-fluid p-0 bgDiv" style="
+    background: url(/img/bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+  <!-- <div class="container-fluid p-0" style="height: 600px;"> -->
+
+    <div class="container text-center text-light" id="wwelcomeText">
+      <h1 style="font-family: Arial Black, Helvetica, sans-serif, Fantasy, sans-serif; text-shadow: 2px 2px #0d0d0d;" class="display-3 showInPc">SPORTS FANTASY</h1>
+      <h4>Your Desired Turf Play Ground</h4>
+      <p class="font-italic">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+    </div>
+
+    <div class="container text-center mt-1">
+      <%- include('./partials/successMsg.ejs') %>
+      <div class="container text-center errorMessageDiv">
+        <div class="alert alert-danger">
+          <h6 id="errorMessage"></h6>
+        </div>
+      </div>
+      <div class="getTable" style="color: rgb(251, 250, 250)">
+       <div class="row">
+        
+        <!-- <div class="col-sm text-right">
+          <strong class="text-light">Book Now </strong><input class="mt-2 p-1" type="date" style="border-radius: 20px;"/>
+        </div> -->
+        <div class="col text-right">
+          <a class="nav-link text-light nav-font" data-toggle="collapse" data-target="#collapseCalender"><button class="btn btn-warning" style="border-radius: 20px; margin-top: 3px;margin-right: -20px;">Book Now</button></a>
+          <!-- <button class="btn btn-outline-light" style="border-radius: 20px; margin-top: 3px;" data-toggle="collapse" data-target="#collapseCalender">Book Now</button> -->
+            <div id="collapseCalender" class="collapse">
+              <input class="mt-2 p-1" type="date" style="border-radius: 20px;"/>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-start">
+          <a style="padding: 5px;margin-top: 5px;" class="nav-link text-light nav-font" href="/contact"><button class="btn btn-outline-light" style="border-radius: 20px; margin-top: 3px; margin-left: -20px;">Find us in Map</button></a>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-3">
+      <!-- <h2 style="color: white;">Book your schedule</h2> -->
+      <h5 class="text-light">
+        <span id="Date"></span><span id="weekDay"></span>
+      </h5>
+      <div class="table-responsive">
+        <table class="table table-bordered text-light">
+          <thead>
+            <tr class="text-light">
+              <td>5:00am-6:00am</td>
+              <td>6:00am-7:00am</td>
+              <td>7:00am-8:00am</td>
+              <td>8:00am-9:00am</td>
+              <td>9:00am-10:00am</td>
+              <td>10:00am-11:00am</td>
+              <td>11:00am-12:00pm</td>
+              <td>12:00pm-1:00pm</td>
+              <td>1:00pm-2:00pm</td>
+              <td>2:00pm-3:00pm</td>
+              <td>3:00pm-4:00pm</td>
+              <td>4:00pm-5:00pm</td>
+              <td>5:00pm-6:00pm</td>
+              <td>6:00pm-7:00pm</td>
+              <td>7:00pm-8:00pm</td>
+              <td>8:00pm-9:00pm</td>
+              <td>9:00pm-10:00pm</td>
+              <td>10:00pm-11:00pm</td>
+              <td>11:00pm-12:00am</td>
+              <td>12:00am-1:00am</td>
+              <td>1:00am-2:00am</td>
+              <td>2:00am-3:00am</td>
+              <td>3:00am-4:00am</td>
+              <td>4:00am-5:00am</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="data"></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-light">
+      <div class="container">
+        <div class="row f">
+            <div class="col-sm m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_1.jpg" alt="Football turf">
+            </div>
+            <div class="col m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_2.jpg" alt="Football turf">
+            </div>
+        </div>
+        <div class="row f">
+            <div class="col-sm m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_3.jpg" alt="Football turf">
+            </div>
+            <div class="col m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_8.png" alt="Football turf">
+            </div>
+        </div>
+        <div class="row f">
+            <div class="col-sm m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_5.jpg" alt="Football turf">
+            </div>
+            <div class="col m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_6.jpg" alt="Football turf">
+            </div>
+        </div>
+        <div class="row f">
+            <div class="col-sm m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_7.png" alt="Football turf">
+            </div>
+            <div class="col m-3" style="box-shadow: 2px 2px 5px;">
+                <img class="img-fluid rounded p-2" src="/img/banner_4.png" alt="Football turf">
+            </div>
+        </div>
+    </div>
+    </div>
+
+<%- include('./partials/footer.ejs') %> 
+
+  <script>
+    $(".errorMessageDiv").hide();
+    $("table").hide();
+
+    $(document).ready(() => {
+      $('td').addClass('text-light');
+      $("td").attr("style", "color:black;");
+
+      $(`input[type="date"]`).change(() => {
+        $("#data").empty();
+        $("table").show();
+        let date = $(`input[type="date"]`).val();
+        $.ajax({
+          url: "/findSchedule",
+          method: "POST",
+          data: {
+            SI: date,
+          },
+          success: (data) => {
+            if (data == "Back dated schedule can not be booked!") {
+              $(".successMsgDiv").hide();
+              $(".errorMessageDiv").show();
+              $("#errorMessage").text(data);
+            } else {
+              $(".errorMessageDiv").hide();
+              $(".successMsgDiv").hide();
+              $("#data").empty();
+              let sData = Object.values(data[0]);
+              $("#Date").text(data[1]);
+              $("#weekDay").text(data[2]);
+              let timeSchedule = 0;
+              for (let i = 3; i < sData.length; i++) {
+                timeSchedule++;
+                const e = sData[i];
+                if (e == null || e == "") {
+                  $("#data").append(
+                    `<td class="bg-success" onclick="getData(this)" data-id="${timeSchedule}" data-day="${data[3]}" data-month="${data[4]}">Available</td>`
+                  );
+                } else {
+                  $("#data").append(
+                    `<td class="bg-danger" data-id="${timeSchedule}" data-day="${data[3]}" data-month="${data[4]}">Booked</td>`
+                  );
+                }
+              }
+            }
+          },
+        });
+      });
+
+    });
+
+    function getData(e) {
+      let day = e.getAttribute("data-day");
+      let month = e.getAttribute("data-month");
+      let timeSchedule = e.getAttribute("data-id");
+
+      let form = `<div class="container-fluid text-center pt-4">
+      <hr><hr>
+      <div class="container-fluid text-center p-0 logoDiv">
+          <h1 style="font-family: Cooper Black, Fantasy, sans-serif; font-size: 28px;" class="mt-2 _head text-dark">Sports<strong><i style="font-size:30px" class="fa">&#xf1e3;</i></strong>Fantasy</h1>
+      </div>
+      <hr><hr>
+      <div class="container-fluid d-flex justify-content-center text-center mt-3 mb-3 pb-2">
+        <a class="" href="/user"><button class="btn btn-outline-dark" style="border-radius: 20px;">Home</button></a>
+        <a class="" href="/features"><button class="btn btn-outline-dark" style="border-radius: 20px;">Features</button></a>
+        <a class="" href="/contact"><button class="btn btn-outline-dark" style="border-radius: 20px;">Contact</button></a>
+      </div>
+    </div>
+      <div class="container text-center" style="width: 300px;">
+        <form action="/bookSchedule" method="post">
+            <div class="container mt-2">
+                <div class="row mt-2">
+                   
+                    <div class="col">
+                      <input id="name" type="text" class="form-control" name="name" placeholder="Name" required/>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                  
+                    <div class="col">
+                      <input id="mobile" type="text" class="form-control" name="mobile" placeholder="Mobile" required/>
+                    </div>
+                  </div>
+                  <div class="container d-flex justify-content-end mt-4 mr-3">
+                    <input type="hidden" name="day" value="${day}"/>
+                    <input type="hidden" name="month" value="${month}"/>
+                    <input type="hidden" name="timeSchedule" value="${timeSchedule}"/>
+                    <input class="btn btn-outline-dark" style="border-radius: 20px;" name="submit" type="submit" value="Book" />
+                </div>
+            </form>
+  </div>`;
+
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = form;
+
+      // window.print();
+
+      // document.body.innerHTML = originalContents;
+    }
+
+    document.addEventListener('scroll', () => {
+      let gallery = document.getElementById('img_gallery')
+      let body = document.getElementById('body')
+      if (gallery.getBoundingClientRect().top < 0) {
+        
+        // body.setAttribute('style', `"
+        // background: url(/img/banner_2.jpg);
+        // background-size: cover;
+        // background-position: center;
+        // background-repeat: no-repeat;"
+        // `)
+      }
+    })
+  </script>
+</body>
